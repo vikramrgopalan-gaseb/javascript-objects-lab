@@ -23,9 +23,15 @@ const game = {
 
 /* console.dir(pokemon, { maxArrayLength: null }) */
 
-/* console.log(pokemon.name); */
+/* 
+Exercise 1
+console.log(pokemon[58].name);
+/*
 
-/* console.log(game) */
+/*
+Exercise 2
+console.log(game)
+/*
 
 /*
 Exercise 3
@@ -36,11 +42,98 @@ Exercise 3
 Solve Exercise 3 here:
 */
 
-game.difficulty = ['Easy', 'Med', 'Hard']
+/*  game.difficulty = ['Easy', 'Med', 'Hard']
 
 console.log(game.difficulty)
 
 game.difficulty = 'Med'
 
-console.log(game.difficulty)
+console.log(game.difficulty) /*
 
+/*
+Exercise 4
+1. Select a starter Pokémon from the `pokemon` array. Remember, a starter Pokémon's `starter` property is true.
+2. Add this Pokémon to the `game.party` array. Which array method will you use to add them?
+
+
+Solve Exercise 4 here:
+*/
+
+/* const starters = []
+
+pokemon.forEach((poke, starter) => {
+  if(poke.starter === true) {
+  console.log(poke.name); 
+starters.push(poke)
+}
+});
+
+game.party.push(starters[2]);
+
+console.log(game.party) */
+
+/*
+Exercise 5
+1. Choose three more Pokémon from the `pokemon` array and add them to your party.
+2. Consider different attributes like 'type' or 'HP' for your selection. Which array method will you use to add them?
+
+
+Solve Exercise 5 here:
+*/
+
+const starters = []
+const grass = []
+const fire = []
+const hp = []
+
+pokemon.forEach((poke) => {
+  if(poke.starter === true) {
+  console.log(poke.name); 
+starters.push(poke)
+}
+});
+
+pokemon.forEach((poke) => {
+  if(poke.type === 'grass') {
+  console.log(poke.name); 
+grass.push(poke)
+}
+});
+
+pokemon.forEach((poke) => {
+  if(poke.type === 'fire') {
+  console.log(poke.name); 
+fire.push(poke)
+}
+});
+
+pokemon.forEach((poke) => {
+  if(poke.hp < 75) {
+  console.log(poke.name); 
+hp.push(poke)
+}
+});
+
+game.party.push(starters[2]);
+game.party.push(grass[1]);
+game.party.push(fire[4]);
+game.party.push(hp[5]);
+
+console.log(game.party)
+
+/*
+Exercise 6
+1. Set the `completed` property to true for gyms with a difficulty below 3.
+2. Think about how you'd loop through the `gyms` array to check and update the `completed` property.
+
+
+Solve Exercise 6 here:
+*/
+
+/* for (let i = 0; i < gyms.length; i++) {
+
+    if (gyms.difficulty < 3,
+    gyms.completed = true
+    )
+    console.log(game)
+} */
