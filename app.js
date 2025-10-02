@@ -81,6 +81,7 @@ Exercise 5
 Solve Exercise 5 here:
 */
 
+/*
 const starters = []
 const grass = []
 const fire = []
@@ -119,7 +120,7 @@ game.party.push(grass[1]);
 game.party.push(fire[4]);
 game.party.push(hp[5]);
 
-console.log(game.party)
+console.log(game.party) /*
 
 /*
 Exercise 6
@@ -130,10 +131,42 @@ Exercise 6
 Solve Exercise 6 here:
 */
 
-/* for (let i = 0; i < gyms.length; i++) {
+game.gyms.forEach((gym) =>
+    if (gym.difficulty < 3) {
+      gym.completed = true);
+    }
+console.log(game.gyms)
 
-    if (gyms.difficulty < 3,
-    gyms.completed = true
-    )
-    console.log(game)
-} */
+/*
+Exercise 7
+1. Evolve the starter Pokémon you added to your party earlier. Each starter Pokémon evolves into a specific one.
+2. How would you replace the current starter Pokémon in your party with its evolved form?
+
+Hint: 
+  - Pokemon 1: Bulbasaur evolves into Pokemon 2: Ivysaur
+  - Pokemon 4: Charmander evolves into Pokemon 5: Charmeleon
+  - Pokemon 7: Squirtle evolves into Pokemon 8: Wartortle
+  - Pokemon 25: Pikachu evolves into Pokemon 26: Raichu
+
+More Hints: The existing starter Pokemon will be *replaced* in your party with the Pokemon it evolved into. When working with an array of objects, the splice() array method is ideal for replacing one element with another. 
+
+
+Solve Exercise 7 here:
+*/
+
+const starters = []
+
+pokemon.forEach((poke, starter) => {
+  if(poke.starter === true) {
+  console.log(poke.name); 
+starters.push(poke)
+}
+});
+
+game.party.push(starters[2]);
+
+console.log(game.party)
+
+game.party.number.splice(0,0,8)
+
+console.log(game.party)
