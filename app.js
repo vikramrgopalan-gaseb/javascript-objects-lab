@@ -170,3 +170,69 @@ console.log(game.party)
 game.party.number.splice(0,0,8)
 
 console.log(game.party)
+
+/*
+Exercise 8
+1. Print the name of each Pokémon in your party.
+2. Consider using a loop or an array method to access each Pokémon's name.
+
+Solve Exercise 8 here:
+*/
+
+const starters = []
+const grass = []
+const fire = []
+const hp = []
+
+pokemon.forEach((poke) => {
+  if(poke.starter === true) {
+  console.log(poke.name); 
+starters.push(poke)
+}
+});
+
+pokemon.forEach((poke) => {
+  if(poke.type === 'grass') {
+  console.log(poke.name); 
+grass.push(poke)
+}
+});
+
+pokemon.forEach((poke) => {
+  if(poke.type === 'fire') {
+  console.log(poke.name); 
+fire.push(poke)
+}
+});
+
+pokemon.forEach((poke) => {
+  if(poke.hp < 75) {
+  console.log(poke.name); 
+hp.push(poke)
+}
+});
+
+game.party.push(starters[2]);
+game.party.push(grass[1]);
+game.party.push(fire[4]);
+game.party.push(hp[5]);
+
+console.log(game.party.name)
+
+/*
+Exercise 9
+1. Can you print out all the starter Pokémon from the `pokemon` array?
+2. Think about how you can identify a starter Pokémon and then log their names.
+
+
+Solve Exercise 9 here:
+*/
+
+/* const starters = []
+
+pokemon.forEach((poke) => {
+  if(poke.starter === true) {
+  console.log(poke.name); 
+starters.push(poke)
+}
+}); /*
