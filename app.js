@@ -235,10 +235,10 @@ Exercise 12
 Solve Exercise 12 here:
 */
 
-// game.gyms.forEach((gym) =>
-//     if (gym.difficulty < 6) {
-//       gym.completed = true);
-//     }
+game.gyms.forEach((gym) =>{
+if (gym.difficulty < 6)
+gym.completed = true;
+})
 // console.log(game.gyms)
 
 /*
@@ -264,11 +264,20 @@ For example, if five gym objects have a value of `true` on their `completed` pro
 Solve Exercise 13 here:
 */
 
-/* gymStatus(gymTally) {
-    const gymtally = {completed, incomplete}
-    game.catchPokemon = [];
-    game.party.push(pokemonObj);
+game.gymStatus = function() {
+    const gymTally = {completed:0, incomplete:0}
+    game.gyms.forEach(gym => {
+        if (gym.completed === true) {
+            gymTally.completed++
+        }
+        else if (gym.completed === false) {
+            gymTally.incomplete++
+        }
+    })
+    // console.log (gymTally)
   }
+
+  game.gymStatus()
 
 /*
 Exercise 14
