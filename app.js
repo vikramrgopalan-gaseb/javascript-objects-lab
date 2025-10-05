@@ -42,13 +42,13 @@ Exercise 3
 Solve Exercise 3 here:
 */
 
-/*  game.difficulty = ['Easy', 'Med', 'Hard']
+game.difficulty = ['Easy', 'Med', 'Hard']
 
 console.log(game.difficulty)
 
 game.difficulty = 'Med'
 
-console.log(game.difficulty) /*
+// console.log(game.difficulty)
 
 /*
 Exercise 4
@@ -59,7 +59,7 @@ Exercise 4
 Solve Exercise 4 here:
 */
 
-/* const starters = []
+const starters = []
 
 pokemon.forEach((poke, starter) => {
   if(poke.starter === true) {
@@ -70,7 +70,7 @@ starters.push(poke)
 
 game.party.push(starters[2]);
 
-console.log(game.party) */
+// console.log(game.party)
 
 /*
 Exercise 5
@@ -81,18 +81,18 @@ Exercise 5
 Solve Exercise 5 here:
 */
 
-/*
-const starters = []
+
+// const starters = []
 const grass = []
 const fire = []
 const hp = []
 
-pokemon.forEach((poke) => {
-  if(poke.starter === true) {
-  console.log(poke.name); 
-starters.push(poke)
-}
-});
+// pokemon.forEach((poke) => {
+  // if(poke.starter === true) {
+  // console.log(poke.name); 
+// starters.push(poke)
+// }
+// });
 
 pokemon.forEach((poke) => {
   if(poke.type === 'grass') {
@@ -115,14 +115,14 @@ hp.push(poke)
 }
 });
 
-game.party.push(starters[2]);
+// game.party.push(starters[2]);
 game.party.push(grass[1]);
 game.party.push(fire[4]);
 game.party.push(hp[5]);
 
-console.log(game.party) /*
+// console.log(game.party) 
 
-/*
+/* 
 Exercise 6
 1. Set the `completed` property to true for gyms with a difficulty below 3.
 2. Think about how you'd loop through the `gyms` array to check and update the `completed` property.
@@ -131,10 +131,10 @@ Exercise 6
 Solve Exercise 6 here:
 */
 
-game.gyms.forEach((gym) =>
+game.gyms.forEach((gym) => {
     if (gym.difficulty < 3) {
-      gym.completed = true);
-    }
+      gym.completed = true;
+    }})
 console.log(game.gyms)
 
 /*
@@ -154,22 +154,9 @@ More Hints: The existing starter Pokemon will be *replaced* in your party with t
 Solve Exercise 7 here:
 */
 
-const starters = []
+game.party.splice(0,1,pokemon[7])
 
-pokemon.forEach((poke, starter) => {
-  if(poke.starter === true) {
-  console.log(poke.name); 
-starters.push(poke)
-}
-});
-
-game.party.push(starters[2]);
-
-console.log(game.party)
-
-game.party.number.splice(0,0,8)
-
-console.log(game.party)
+// console.log(game.party)
 
 /*
 Exercise 8
@@ -179,45 +166,8 @@ Exercise 8
 Solve Exercise 8 here:
 */
 
-const starters = []
-const grass = []
-const fire = []
-const hp = []
-
-pokemon.forEach((poke) => {
-  if(poke.starter === true) {
-  console.log(poke.name); 
-starters.push(poke)
-}
-});
-
-pokemon.forEach((poke) => {
-  if(poke.type === 'grass') {
-  console.log(poke.name); 
-grass.push(poke)
-}
-});
-
-pokemon.forEach((poke) => {
-  if(poke.type === 'fire') {
-  console.log(poke.name); 
-fire.push(poke)
-}
-});
-
-pokemon.forEach((poke) => {
-  if(poke.hp < 75) {
-  console.log(poke.name); 
-hp.push(poke)
-}
-});
-
-game.party.push(starters[2]);
-game.party.push(grass[1]);
-game.party.push(fire[4]);
-game.party.push(hp[5]);
-
-console.log(game.party.name)
+// ADVICE -> for each loop game party
+// console.log(game.party.name)
 
 /*
 Exercise 9
@@ -228,14 +178,12 @@ Exercise 9
 Solve Exercise 9 here:
 */
 
-/* const starters = []
-
 pokemon.forEach((poke) => {
   if(poke.starter === true) {
   console.log(poke.name); 
 starters.push(poke)
 }
-}); /*
+});
 
 /*
 Exercise 10
@@ -249,10 +197,13 @@ After writing this method, call it and pass in a Pokemon object of your choice f
 Solve Exercise 10 here:
 */
 
-  catchPokemon(pokemonObj) {
-    game.catchPokemon = [];
-    game.party.push(pokemonObj);
-  }
+game.catchPokemon = function(pokemonObj) {
+game.party.push(pokemonObj);
+}
+
+game.catchPokemon(pokemon[10])
+
+// console.log(game.party)
 
   /*
 Exercise 11
@@ -267,11 +218,14 @@ Also, log the `game.items` array to confirm that the pokeball quantity is being 
 Solve Exercise 11 here:
 */
 
-catchPokemon(pokemonObj) {
-    game.catchPokemon = [];
-    game.party.push(pokemonObj);
-    game.items.pop()
-  }
+game.catchPokemon = function(pokemonObj) {
+game.party.push(pokemonObj);
+game.items[1].quantity -= 1
+}
+
+game.catchPokemon(pokemon[10])
+
+// console.log(game.items)
 
 /*
 Exercise 12
@@ -281,11 +235,11 @@ Exercise 12
 Solve Exercise 12 here:
 */
 
-game.gyms.forEach((gym) =>
-    if (gym.difficulty < 6) {
-      gym.completed = true);
-    }
-console.log(game.gyms)
+// game.gyms.forEach((gym) =>
+//     if (gym.difficulty < 6) {
+//       gym.completed = true);
+//     }
+// console.log(game.gyms)
 
 /*
 Exercise 13
@@ -310,7 +264,7 @@ For example, if five gym objects have a value of `true` on their `completed` pro
 Solve Exercise 13 here:
 */
 
-gymStatus(gymTally) {
+/* gymStatus(gymTally) {
     const gymtally = {completed, incomplete}
     game.catchPokemon = [];
     game.party.push(pokemonObj);
@@ -328,7 +282,7 @@ This method should:
 Solve Exercise 14 here:
 */
 
-partyCount(pokemon) {
+/* partyCount(pokemon) {
     game.party.count(pokemon)
   }
 
@@ -340,7 +294,7 @@ Exercise 15
 Solve Exercise 15 here:
 */
 
-game.gyms.forEach((gym) =>
+/* game.gyms.forEach((gym) =>
     if (gym.difficulty < 8) {
       gym.completed = true);
     }
@@ -354,4 +308,4 @@ Exercise 16
 Solve Exercise 16 here:
 */
 
-console.log(game)
+// console.log(game)
