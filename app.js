@@ -274,7 +274,7 @@ game.gymStatus = function() {
             gymTally.incomplete++
         }
     })
-    // console.log (gymTally)
+    //console.log (gymTally)
   }
 
   game.gymStatus()
@@ -291,9 +291,11 @@ This method should:
 Solve Exercise 14 here:
 */
 
-/* partyCount(pokemon) {
-    game.party.count(pokemon)
-  }
+game.partyCount = function() {
+    return game.party.length
+}
+
+// console.log(game.partyCount())
 
   /*
 Exercise 15
@@ -303,11 +305,13 @@ Exercise 15
 Solve Exercise 15 here:
 */
 
-/* game.gyms.forEach((gym) =>
-    if (gym.difficulty < 8) {
-      gym.completed = true);
-    }
+game.gyms.forEach((gym) =>{
+if (gym.difficulty < 8)
+gym.completed = true;
+})
 console.log(game.gyms)
+
+game.gymStatus()
 
 /*
 Exercise 16
