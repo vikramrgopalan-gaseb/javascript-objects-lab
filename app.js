@@ -135,7 +135,7 @@ game.gyms.forEach((gym) => {
     if (gym.difficulty < 3) {
       gym.completed = true;
     }})
-console.log(game.gyms)
+// console.log(game.gyms)
 
 /*
 Exercise 7
@@ -166,8 +166,9 @@ Exercise 8
 Solve Exercise 8 here:
 */
 
-// ADVICE -> for each loop game party
-// console.log(game.party.name)
+game.party.forEach((poke) => {
+    console.log(poke.name);
+});
 
 /*
 Exercise 9
@@ -309,7 +310,7 @@ game.gyms.forEach((gym) =>{
 if (gym.difficulty < 8)
 gym.completed = true;
 })
-console.log(game.gyms)
+// console.log(game.gyms)
 
 game.gymStatus()
 
@@ -321,4 +322,4 @@ Exercise 16
 Solve Exercise 16 here:
 */
 
-// console.log(game)
+console.log(game)
